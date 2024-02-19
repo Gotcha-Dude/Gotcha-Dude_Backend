@@ -1,3 +1,6 @@
 [submodule "Gotcha-Dude-Config"]
 	path = Gotcha-Dude-Config
 	url = https://github.com/Gotcha-Dude/Gotcha-Dude-Config.git
+[submodule "config"]
+	path = config
+	url = https://github.com/Gotcha-Dude/config.git
