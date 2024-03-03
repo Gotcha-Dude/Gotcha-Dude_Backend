@@ -1,4 +1,5 @@
 package com.gotcha_dude.image.controller;
 
-public class Controller {
+
+public class ImageController {
 }
