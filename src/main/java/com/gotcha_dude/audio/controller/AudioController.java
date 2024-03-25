@@ -10,17 +10,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class AudioController {
 
     private final AudioService audioService;
 
-    @PostMapping("/testapi")
-    public String getString(@RequestBody String data){
-        System.out.println(data);
-        return data;
+    @GetMapping("/testapi")
+    public String getString(){
+        return "hihihii";
     }
 
     @PostMapping("/audio")
