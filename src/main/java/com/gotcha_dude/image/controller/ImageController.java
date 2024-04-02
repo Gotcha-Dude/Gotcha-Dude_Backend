@@ -28,11 +28,11 @@ public class ImageController {
     }
 
     @PostMapping("/upload")
-    public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) throws IOException {
-        System.out.println("나여기기기기");
-       /* String filePath = "/uploads/" + file.getOriginalFilename();*/
-        String upLoadFileInfo = imageService.editImage(file);
-        return ResponseEntity.ok(upLoadFileInfo);
+    public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file, @RequestParam("imageCount") int imageCount) throws IOException {
+        // 이미지 업로드 서비스 호출
+        String uploadFileInfo = imageService.editImages(file, imageCount);
+        // 업로드 결과를 클라이언트에 반환
+        return ResponseEntity.ok(uploadFileInfo);
     }
 
 
